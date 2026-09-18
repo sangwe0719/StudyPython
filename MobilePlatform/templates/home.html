@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 모바일 화면 대응 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>홈</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>홈 페이지</h1>
+
+        <p class="welcome">{{ username }}님 환영합니다.</p>
+
+
+        <div class="author-info">
+            <p><strong>작성자 이름:</strong> 마상위</p>
+            <p><strong>학번:</strong> 32227297</p>
+            <p><strong>학과:</strong> 소프트웨어학과</p>
+        </div>
+
+
+        <h2>작성자 사진</h2>
+        <img src="{{ url_for('static', filename='author.jpg') }}" alt="작성자 사진" class="author-img">
+
+        <div class="link-box">
+            <a href="{{ url_for('users') }}">회원가입 리스트 보기</a>
+        </div>
+
+        <div class="link-box">
+            <a href="{{ url_for('logout') }}">로그아웃</a>
+        </div>
+    </div>
+</body>
+</html>
